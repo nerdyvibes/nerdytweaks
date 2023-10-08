@@ -19,7 +19,7 @@ event = {
 
 	date = { day = 1 month = january year = 1936 }
 	offset = 1
-	deathdate = { day = 27 month = august year = 1939 }
+	deathdate = { day = 27 month = august year = 1936 }
 	
 	action_a = {
 		name = ACTION_NAME_OK

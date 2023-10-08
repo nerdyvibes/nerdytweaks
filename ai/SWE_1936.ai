@@ -27,7 +27,7 @@ resistance = {
 	SOV = 6
 }
 befriend = {
-	GER = 100
+	GER = 80
 	FIN = 100
 	ENG = 80
 	FRA = 80

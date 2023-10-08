@@ -28,9 +28,9 @@ economy = {
 # Resource multiplier for non-national provinces
 	0.5 #0.5
 # Resource multiplier for occupied provinces (overrides non-national)
-	0.4 #0.4
+	0.5 #0.4
 # Resource multiplier for non-national provinces for AI countries (replaces both above). Use -1 disable this AI cheat.
-	0.75 #0.75
+	0.5 #0.75
 # Resource multiplier for puppets (multiplier on the others)
 	1.0 #1.0
 # TC Undeployed Division Load
@@ -82,7 +82,7 @@ economy = {
 # Reinforce to upgrade modifier. Values from 0.0 (divisions do not get extra upgrade progress on reinforcement) to 1.0 (1:1 ratio, 1% reinforce adds 1% to upgrade progress)
 	0.5 # 0.0
 # Added extra upgrade progress to units in supply. Added daily progress to all units in supply that can upgrade is equal to Cur_STR/(Max_STR * THIS). Added value is not affected by any other upgrade modifiers. Set to 0 to disable this functionality.
-	3600 #0
+	0 #0
 # Nationalism starting value
 	15
 # Nationalism per MP (added to stating value)
@@ -98,7 +98,7 @@ economy = {
 # TC Load from undeployed brigades (multiplied on top of the division cost)
 	0.3
 # If units can be sold/transferred to non allied countries. 0 = No, 1 = Yes (player could offer units to all countries and ask for units from allied countries), 2 = Yes (player could offer and ask for units from all countries) 
-	1 #1
+	0 #1
 # If Blue Prints can be sold to non-allied countries. 0 = No, 1 = Yes (player could offer BP), 2 = Yes (player could offer and ask for BPs) 	0 #0
 	0 #0
 # If owned (!) provinces can be sold/transferred to non-allied countries. 0 = No, 1 = Yes (player could offer such provinces), 2 = Yes (player cold offer and ask for such provinces)
@@ -168,7 +168,7 @@ economy = {
 # Max daily dissent that can be added to player controlled countries when not enough supplies are produced (and the same time more then required IC is used on CG or on any other slider then on Supplies). 0.0 - Disabled, 1.0 - No restriction
 	0.0 #1.0
 # Nukes production rate modifier. Higher this is, longer it takes to get a new nuke.
-	80.0 #80.0
+	40.0 #80.0
 # Convoy system options for allied (own country and friendly nations controlled land connected provinces) and own (own country controlled and land connected provinces) areas: 
 #	0 - Ignore allied areas, work on own areas only. Default (old) behavior
 #	1 - Convoys can be to/from own country controlled provinces only, but allied area is used too (so there's only one convoy to allied area per country)
@@ -188,7 +188,7 @@ economy = {
 
 intelligence = {
 # Days between spy missions in a country. Do not use fractions
-	21 #8
+	45 #8
 # Days between increase intelligence levels. Do not use fractions
 	180
 # Chance to detect the initiator of a spy mission; Values = [0 - 100]; 0 = never detected, Do not use fractions
@@ -223,7 +223,7 @@ intelligence = {
 
 diplomacy = {
 # Days between diplomatic missions in a country. Do not use fractions
-	8 #8
+	3 #8
 # Days between policy slider moves
 	360 #360
 # Requirement for "Influence Nation" to affect domestic sliders: Our IC >= Target IC * X
@@ -312,17 +312,17 @@ combat = {
 # Combat Modifier: Dissent Multiplier
 	-0.005
 # Combat Modifier: Default Supply Problems Mod - Land
-	-0.4 #-0.5
+	-0.5 #-0.5
 # Combat Modifier: Default Supply Problems Mod - Air
-	-0.2
+	-0.3
 # Combat Modifier: Default Supply Problems Mod - Naval
-	-0.1 #0	
+	-0.2 #0	
 # Combat Modifier: Default Fuel Problems Mod - Land
 	-0.1 #0.0
 # Combat Modifier: Default Fuel Problems Mod - Air
-	-0.1 #0.0
+	-0.5 #0.0
 # Combat Modifier: Default Fuel Problems Mod - Naval
-	-0.05 #0.0	
+	-0.5 #0.0	
 # Combat Modifier: Radar Station ( value * radar level)
 	-0.035
 # Combat Modifier: Interceptor vs Bomber Mod
@@ -340,17 +340,17 @@ combat = {
 # Land Leader Command Limit (nr of divisions), Rank 1
 	9
 # Land Leader Command Limit (nr of divisions), Rank 2
-	3
+	6
 # Land Leader Command Limit (nr of divisions), Rank 3 (lowest)
-	1
+	3
 # Air Leader Command Limit (nr of divisions), Rank 0 (highest)
-	8 # 5
+	5 # 5
 # Air Leader Command Limit (nr of divisions), Rank 1
-	5 # 3
+	3 # 3
 # Air Leader Command Limit (nr of divisions), Rank 2
-	3 # 2
+	2 # 2
 # Air Leader Command Limit (nr of divisions), Rank 3 (lowest)
-	2 # 1
+	1 # 1
 # Naval Leader Command Limit (nr of ships), Rank 0 (highest)
 	18
 # Naval Leader Command Limit (nr of ships), Rank 1
@@ -420,9 +420,9 @@ combat = {
 # Base chance of units attacked by province AA to avoid hit if no defences left.
 	-0.01
 # CHANCE TO GET TERRAIN TRAIT 
-	3600
+	900
 # CHANCE TO GET EVENT TRAIT 
-	3600
+	900
 # BONUS ON TERRAIN TRAIT
 	0.1
 # Combat bonus for terrain trait on similar terrain (Ranger in Jungles for example)
@@ -430,11 +430,11 @@ combat = {
 # BONUS_ON_EVENT_TRAIT_
 	0.05
 # Combat bonus per leader skill point - Land commanders.
-	0.05
+	0.2
 # Combat bonus per leader skill point - Air commanders.
-	0.02
+	0.2
 # Combat bonus per leader skill point - Naval commanders.
-	0.02
+	0.2
 # Chance of leaders dying while in combat per day
 	0.00003
 # Land unit - Min inflicted ORG damage - starting value, it is modified before being used.
@@ -559,7 +559,7 @@ combat = {
 # AA to Air firing rules: 0 - fire only at passing enemy units on bombing missions, 1 - fire at all passing enemy units
 	1 #0
 # AA to Air night modifier. 1 – no change, 0 – no attack, 0.5 – 50% effectiveness and so on
-	0.5 #1
+	0.25 #1
 # AA to Air bonus from radars. [AA power * (1 + Radar size * Radar Efficiency * THIS)].  0 – no radar bonus 
   	0.25 #0
 # Nukes: STR damage to units modifier. [(0.2 + rand[0.0 to 1.0]) * THIS * Nuke Damage Power]. [multiplier]
@@ -615,7 +615,7 @@ combat = {
 # ORG regain [naval] - Out of fuel modifier. Used when out of fuel. Multiplier
 	0.8 #1.0
 # ORG regain [naval] - Out of supplies modifier. Used when out of supplies. Multiplier
-	0.6 #1.0
+	0.3 #1.0
 # ORG regain [naval] - Current/Max ORG modifier. [1.0 + (1.0 - Current/Max ORG) * THIS]. Set to 0.0 to ignore. Multiplier
 	1.0 #0.0
 # ORG regain [naval] - At naval base modifier. Used when in naval base. [1.0 + Port Size * THIS]. Multiplier
@@ -671,15 +671,15 @@ combat = {
 # Recalculate arrival times for units in "Sync. arrival time" mode after combat/bombardment. NOTE: enabling this could de-synchronize arrival times! 0 - Disabled, 1 - Enabled for players only, 2 - Enabled for players and AI.
 	0 # 0
 # Movement speed modifier to land units in combat
-	0.5 #1.0
+	0.25 #1.0
 # Movement speed modifier to land units in bombardment
-	0.75 #1.0 
+	0.50 #1.0 
 # Land units speed modifier for units out of supply (ignored for retreating units!). speed = speed * THIS.
-	0.9 #0.1
+	0.7 #0.1
 # Land units speed modifier for units containing at least one division with ORG less then 1% (ignored for retreating units!). speed = speed / THIS.
 	1.0 #2.0
 # Movement time modifier for fuel consuming land and air units when out of fuel (ignored for retreating and AI controlled units!). Higher THIS value is, longer the arrival time will be. Use 1.0 to disable this.
-	2.0 #3.0
+	4.0 #3.0
 # Default speed for fuel consuming land units when out of fuel. This value can be overridden for each unit type and model by setting out_of_fuel_speed modifier in unit files. -1 - Disable this functionality, else Default out of fuel speed = THIS
 	-1 #-1
 # Fleet size range penalty - Percentage loss for every ship above the max threshold (see below). 0.0 (0%) to 1.0 (100%)
@@ -919,8 +919,8 @@ mission = {
 # _MISSION_SNEAK_MOVE_
 	1 	# 0 = disabled by default, 1 = enabled by default
 	1.0	# Starting missions efficiency. Valid values: 0.05 to 10.0
-	0.75	# Fleet range modifier
-	0.75	# Chance to be detected (Chance * This / mission_efficiency). Lower the better
+	1.0	# Fleet range modifier
+	0.80	# Chance to be detected (Chance * This / mission_efficiency). Lower the better
 # _MISSION_NAVAL_SCRAMBLE_
 	1 	# 0 = disabled by default, 1 = enabled by default
 	1.0	# Starting missions efficiency. Valid values: 0.05 to 10.0
@@ -1031,7 +1031,7 @@ research = {
 # Money cost for each skill-level
 	0.25 #0.2
 # Mean number of "invention" events occuring per year
-	4
+	8
 # Use new Technology page layout - allow for more techs and better view. 0 - use vanilla; 1 - use new
 	1 #0
 # Tech overview panel style: 0 - use old style; 1 - Use new style (unit and brigade models moved to new panels: "Units" and "Brigades")
@@ -1041,7 +1041,7 @@ research = {
 # Min active tech teams at a time (available teams regardless of current IC)
 	1 #1
 # Required IC for each tech team above the min
-	20 #20
+	25 #20
 # On new country release - allow known techs with rocketry component to be given to the new country: 0 - No, 1 - Yes
 	0 #0
 # On new country release - allow known techs with nuclear_physics component to be given to the new country: 0 - No, 1 - Yes
@@ -1056,7 +1056,7 @@ research = {
 
 trade = {
 # Days between trade offers to a country. Do not use fractions!
-	8 #8
+	3 #8
 # Delay in days on each game start/reload before allowing any new trades (AI, auto-trade and Diplomacy). Should be at least 2 days!
 	2 #0
 # Limit new trade deals to allies, preferred countries (AI), current trade partners or neighbors for X days on every game start or reload.	
@@ -1163,9 +1163,9 @@ ai = {
 # -3 : Forced historical - First valid action is always selected if there is no AI chances set for a valid action, else - (first) valid action with the highest AI chance set is selected
     85 #85
 # Force strategic redeployment if movement time is longer then X hours. Overrides default AI settings! -1 – Disable, Else time in hours
-	2160 #-1
+	-1 #-1
 # Max. redeployment days for AI controlled units cheat. 0 or less - disable cheat, else - max. days that AI units will redeploy to any valid redeployment location
-	14 # 0
+	0 # 0
 # Use quick area check (Garrison AI) - could be inaccurate in some rare cases. 1 - Enabled, 0 - Disabled
 	0 # 0
 # AI masters get all provinces conquered by AI puppets. 1 – Yes, 0 – No (old rules)
@@ -1198,7 +1198,7 @@ mod = {
 # Switched AI files logger (SwitchAI.txt): 0 - Disabled, 1 - Enabled.
 	1 #0
 # Use new auto-save file format: AutoSave_Country_Year_Month_Day.eug. 1 - Enabled, 0 – Disabled.
-	0 #0 
+	1 #0 
 # Load new AI settings on AI file switching to all clients in MP games. 1 - Enabled, 0 - Disabled.
 	1 #0
 # Trade Efficiency calculation system and re-calculation interval selection. Any negative integer is number of days between trade efficiency calculations using default Armageddon system (-3 = 3 days). Any positive integer is the number of days between trade efficiency calculations using the new more intelligent but CPU demanding system. 0 is default Armageddon system, set to 1 day.
@@ -1210,11 +1210,11 @@ mod = {
 # Allow brigade attaching as long as the unit is in supply no matter on whom territory it is. 1 - Enabled, 0 - Disabled (default)
 	1 #0
 # Multiple deployment - preferred unit size for armies. This could be overridden in-game by holding SHIFT (deploy all in a single group) or CONTROL (deploy each in own group) keys.
-	3
+	1
 # Multiple deployment - preferred unit size for fleets. This could be overridden in-game by holding SHIFT (deploy all in a single group) or CONTROL (deploy each in own group) keys.
-	6
+	1
 # Multiple deployment - preferred unit size for air. This could be overridden in-game by holding SHIFT (try to deploy all in a single group) or CONTROL (deploy each in own group) keys. 
-	2
+	1
 # Allow unique pictures to all land provinces. 1 - Enabled, 0 - Disabled (only urban provinces may have unique pictures)
 	1 #0
 # Auto reply to events (players). 0 - Disabled, 1 - Enabled (using AI event action selection rules - see "ai" section)
@@ -1234,7 +1234,7 @@ mod = {
 # Rebels ORG regain (including when in combat)
 	0.075 #0.05
 # Extra bonus for rebelling for every rebel controlled neighboring province
-	10 #0
+	30 #0
 # Extra bonus for rebelling for occupied enemy provinces
 	10 #0
 # Extra rebel bonus for mountain terrain
@@ -1252,7 +1252,7 @@ mod = {
 # Extra rebel bonus for plains terrain
 	0 #0	
 # Extra rebel bonus for urban provinces
-	0 #0
+	5 #0
 # Extra rebel bonus for provinces with Air or Naval bases
 	0 #0
 # Return rebellious province to the original owner after X months if there are no rebel armies into the province anymore.
