@@ -8,21 +8,21 @@ diplomacy = {
 # Bring to Alliance
 	100
 # Join Alliance
-	30
+	10
 # Leave Alliance
-	150
+	50
 # Ban from Alliance
-	150
+	50
 # Influence Nation
 	100
 # Coup Nation
-	1000
+	5000
 # Ask for Military Access
-	150
+	50
 # Cancel Military Access
-	30
+	10
 # Revoke Military Access
-	30
+	10
 # Assume Military Control
 	0
 # Cancel Military Control
@@ -38,21 +38,21 @@ diplomacy = {
 # Demand Territory
 	100
 # Open Negotiations
-	30
+	10
 # Offer Non-Aggression Pact
 	100
 # Cancel Non-Aggression Pact
-	100
+	1000
 # Offer Trade Agreement
 	0
 # Cancel Trade Agreement
-	10
+	0
 # Cancel Peace Treaty
 	100
 # Sue for Peace
 	0
 # Release Puppet
-	20
+	0
 # Liberate Nation
 	0
 # Do not send expeditionary forces
